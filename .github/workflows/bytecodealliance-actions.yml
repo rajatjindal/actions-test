@@ -10,6 +10,8 @@ jobs:
     steps:
     - name: Setup `wasmtime`
       uses: bytecodealliance/actions/wasmtime/setup@v1
+      with:
+        version: latest
 
     - name: Run `wasmtime version`
       run: "wasmtime --version"
