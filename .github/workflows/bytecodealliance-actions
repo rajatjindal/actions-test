@@ -1,0 +1,15 @@
+name: Test Bytecodealliance/actions
+
+on:
+  workflow_dispatch:
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    name: Setup wasmtime
+    steps:
+    - name: Setup `wasmtime`
+      uses: bytecodealliance/actions/wasmtime/setup@v1
+
+    - name: Run `wasmtime version`
+      run: "wasmtime --version"
